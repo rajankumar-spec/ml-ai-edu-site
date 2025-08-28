@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Topics</h2>
+<div class="topics">
+{% for t in topics %}
+<article class="topic-card">
+<h3><a href="/topic/{{ t.slug }}">{{ t.title }}</a></h3>
+<p>{{ t.summary }}</p>
+</article>
+{% endfor %}
+</div>
+{% endblock %}

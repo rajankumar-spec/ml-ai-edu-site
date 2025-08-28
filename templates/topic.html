@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+<article class="topic">
+<h2>{{ topic.title }}</h2>
+<div class="topic-content">
+{{ topic.content_html | safe }}
+</div>
+
+
+<section id="visualization">
+<h3>Interactive visualization</h3>
+<div id="plot-area"></div>
+
+
+<!-- Controls -->
+<div id="controls">
+<label>Slope: <input id="slope" type="range" min="-5" max="5" step="0.1" value="2.5"></label>
+<label>Intercept: <input id="intercept" type="range" min="-10" max="10" step="0.1" value="4.0"></label>
+<label>Noise: <input id="noise" type="range" min="0" max="20" step="0.5" value="6"></label>
+<button id="regen">Regenerate</button>
+</div>
+
+<!-- Data for interactive visualization -->
+<div id="plot-data" style="display:none;">{{ topic.sample_data_json | safe }}</div>
+
+</section>
+
+
+<section id="exercises">
+<h3>Quiz</h3>
+<p>Q: Increasing the noise moves the regression line. True / False?</p>
+<div>
+<button disabled>True</button>
+<button disabled>False</button>
+<small>(Quiz UI stub — add scoring & persistence later)</small>
+</div>
+</section>
+</article>
+
+
+<script>
+const SLUG = "{{ topic.slug }}";
+</script>
+<script src="/static/js/topic-visuals.js"></script>
+{% endblock %}

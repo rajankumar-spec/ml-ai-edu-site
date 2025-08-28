@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ title if title else 'ML & AI Edu' }}</title>
+<link rel="stylesheet" href="/static/css/styles.css">
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+<header class="site-header">
+<h1><a href="/">ML & AI — Learn Visually</a></h1>
+</header>
+<main class="container">
+{% block content %}{% endblock %}
+</main>
+<footer class="site-footer">Made with ❤️ — Expand or reuse for teaching</footer>
+</body>
+</html>

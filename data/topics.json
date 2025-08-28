@@ -1,0 +1,26 @@
+[
+    {
+    "title": "Linear Regression",
+    "slug": "linear-regression",
+    "summary": "Fit a straight line to data — understand slope, intercept and error.",
+    "content_html": "<h3>What is Linear Regression?</h3><p>Linear regression models a target variable y as a linear function of input x: y = mx + b + noise.</p>",
+    "sample_data": {
+    "type": "linear",
+    "n": 60,
+    "noise": 6,
+    "slope": 2.5,
+    "intercept": 4.0
+    }
+    },
+    {
+    "title": "Logistic Regression",
+    "slug": "logistic-regression",
+    "summary": "Classification using a sigmoid activation to map predictions to probabilities.",
+    "content_html": "<h3>What is Logistic Regression?</h3><p>Logistic regression outputs probabilities for class membership using the logistic (sigmoid) function.</p>",
+    "sample_data": {
+    "type": "classification",
+    "n": 120,
+    "data_range": [-10, 10]
+    }
+    }
+    ]
